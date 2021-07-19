@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <!-- meta tipos de caracteres especiales en la web -->
+		<meta charset="utf-8">
+		<!-- optimizar el sitio para moviles -->
+		<meta name="MobileOptimizer" content="width"/>
+		<!-- optimizacion para cualquier dispositivo -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- descripción del sitio web -->
+		<meta name="description" content="Sistema online para ayuda y guía de estudiantes y futuros estudiantes, gestión del plantel a través de módulos como son:
+		registro de alumnos, reporte de alumnos, Recorrido Virtual de las áreas que conforman al plantel, Desarrollo de Juego Interactivos para el aprendizaje de las distintas carreras que ofrece la institución">
+		<!-- palabras claves para el seo -->
+		<meta name="keywords" content="Sistema Online, Juego, Videojuego, Memorama, Ecología, Reportes de Asistencia, Recorrido Virtual, Juegos Interactivos, Guía de estudiantes, Conalep Naucalpan 1, Gestión de planteles, Carreras Técnicas">
+ 		<!-- meta para el autor del sitio  -->
+		<meta name="autor" content="Borderline 605">
+		<!-- el de la marca --->
+		<meta name="copyright" content="Borderline & Conactive">
+		<meta name="robots" content="index/">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Memorama Ecología | Conactive</title>
+  </head>
+  <body>
+    <!--CSS--->
+    <style>
+      :root{
+        --w: calc(70vw / 6);
+        --h: calc(70vh / 4);
+      }
+      *{
+        transition: all 0.5s;
+      }
+      body{
+        padding: 0;
+        margin: 0;
+        -webkit-perspective: 1000;
+        min-height: 100vh;
+        flex-direction: column;
+        font-family: Arial;
+        text-align: center;
+      }
+      .area-tarjeta, .tarjeta, .cara{
+        height: var(--h);
+        width: var(--w);
+        min-width: 200px;
+        min-height: 200px;
+      }
+      .trasera{
+        background-color: lightcyan;
+        transform: rotateY(180deg);
+      }
+      .superior{
+        background-color: orange;
+      }
+      .tarjeta{
+        position: relative;
+        transform-style: preserve-3d;
+      }
+      .cara{
+        position: absolute;
+        backface-visibility: hidden;
+        box-shadow: inset 0 0 0 5px white;
+        font-size: 500%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 200px;
+      }
+      .area-tarjeta:hover .tarjeta{
+        transform: rotateY(180deg);
+      }
+    </style>
+    <!--CSS--->
+    <!--HTML--->
+    <!--Inicia Navbar-->
+    <link rel="stylesheet" type="text/css" href="../pincipal/css/fontello.css">
+        <nav class="navbar navbar-expand-lg navbar-light" style="background: linear-gradient(to left, #eac3a3, #95cbc8, #95cbc8)">
+          <a href="../../pincipal/principal.php"><img src="../../img1.png" alt="LogoE" style="width: 90px; height: 70px;"></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                  <ul class="navbar-nav ml-auto">
+                      <li class="nav-item active">
+                        <div class="row justify-content-md-center">
+                        <div class="col-md-auto">
+                          <nav aria-label="breadcrumb">
+                      <ol class="breadcrumb" style="background-color: rgb(255, 255, 255); opacity: 0.3;">
+                        <li class="breadcrumb-item"><a href="../../pincipal/principal.php">Inicio</a></li>
+                        <li class="breadcrumb-item"><a href="../PaginaVideoJuegos.php">Videojuegos</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Memorama</li>
+                      </ol>
+                    </nav>
+                    </div>
+                  </div>
+                      </li>
+                </ul>
+              </div>
+            </nav>
+      <!--Termina navbar-->
+      <!--Inicia Memorama-->
+      <div class="container py-5">
+        <div id="tablero">
+
+        </div>
+      </div>
+      <!--Termina Memorama-->
+      <!--Botón nuevo Juego-->
+      <div class="container">
+        <div class="nuevoJuego" onclick="generarTablero()">
+          <button type="button" class="btn btn-info"><i class="fas fa-gamepad"></i> Nuevo Juego</button>
+        </div>
+      </div>
+      <!--Botón nuevo Juego-->
+    <!---HTML-->
+    <!--JS--->
+    <script>
+      let iconos
+
+      generarTablero()
+
+      function cargarIconos() {
+        iconos = [
+          `<i class="fab fa-accusoft"></i>`,
+          `<i class="fas fa-address-book"></i>`,
+          `<i class="fas fa-air-freshener"></i>`,
+          `<i class="fab fa-airbnb"></i>`,
+          `<i class="fas fa-ambulance"></i>`,
+          `<i class="far fa-angry"></i>`,
+          `<i class="fas fa-archway"></i>`,
+          `<i class="fas fa-gamepad"></i>`,
+          `<i class="fas fa-hand-scissors"></i>`,
+          `<i class="fas fa-dice-two"></i>`,
+          `<i class="fas fa-dice"></i>`,
+          `<i class="fas fa-chess-knight"></i>`,
+        ]
+      }
+      function generarTablero() {
+        cargarIconos()
+        let tablero = document.getElementById("tablero")
+        let tarjetas = []
+        for (let i = 0; i < 24; i++) {
+          tarjetas.push(
+          `<div class="area-tarjeta">
+              <div class="tarjeta">
+                <div class="cara trasera" id="tarjeta${i}">
+                ${icono[0]}  
+                </div>
+                <div class="cara superior">
+                  <i class="fas fa-question"></i>
+                </div>
+              </div>
+          </div>`
+          )
+        }
+        tablero.innerHTML = tarjetas.join(" ")
+      }
+    </script>
+    <!--JS--->
+  </body>
+</html>
