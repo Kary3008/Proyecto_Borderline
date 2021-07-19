@@ -1,0 +1,29 @@
+html, body{
+  /*background-color: #9966ff;*/
+  background-color: #fff;
+}
+
+* {
+  font-size: 18px;/*Tamaño de la fuente*/
+}
+
+.estilo{
+  width: 100px;
+	height: 133px;
+	border:4px solid rgb(165, 116, 201);
+  background-color: #fff;
+	border-radius: 20%;
+}
+.estilo:hover{
+	width: 100px;
+	height: 140px;
+	border: 4px solid rgb(165, 116, 201);
+  background-color: #fff;
+	transform: 5s;
+}
+
+.bg-style{
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+}

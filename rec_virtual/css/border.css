@@ -1,0 +1,242 @@
+/*Es una CDN , esta liga sirve para darle una fuente o estilo de letra desde el navegador, se necesita obligatoriamente
+la nececidad del internet para que sirva*/
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+h2 {/* Elemento integrado en el codigo de HTML */
+  vertical-align: center;/*Alineacion de forma vertical*/
+  text-align: center;/* Alinecaion del texto */
+}
+html, body {
+  margin: 0;/* Tamaño del margen */
+  height: 100%;/* Altura */
+}
+* {/* Ayuda a tomar todos los elementos de la pagina */
+  font-family: "Raleway";/* Fuente de letra */
+  box-sizing: border-box;/* Caja */
+}
+.logo{/* Cuando se comieza con un punto es una clase */
+  width: 50px;/* Ancho */
+  height: 50px;/* Alto */
+}
+.top-nav {/* Cuando se comieza con un punto es una clase */
+  display: flex;/* Es la forma en como sera la pantalla */
+  flex-direction: row;/* Direccion que tendra */
+  align-items: center;/* Alineacion de los iconos */
+  justify-content: space-between;/* Jusficado del contenido */
+  background-color: gray;/* Color del fondo */
+  background: linear-gradient(to left,  purple , black );/* Degradado de colores que se va a hacer del fondo */
+  height: 50px;/* Alto */
+  padding: 1em;/* Es el relleno que se le va otorgara un elemento y su borde */
+  color: white;
+  text-decoration: none
+}
+.menu {
+  display: flex;/* Es la forma en como sera la pantalla */
+  flex-direction: row;/* Direccion que tendra */
+  list-style-type: none;/* Tipo de estilo que se le va dar a la lista */
+  margin: 0;/* Tamaño del margen */
+  padding: 0;/* Es el relleno que se le va otorgara un elemento y su borde  */
+}
+.menu > li {/* Es una clase en donde se hereda*/
+  margin: 0 1rem;/* Margen , region de fragmento */
+}
+.menu li a{/* Clase en donde se utilia un elemento */
+  text-decoration: none;/* Tipo de decoracion del texto */
+  color: white;/* Color de la letra */
+  padding: 5px;/* Relleno de un elemento o borde */
+  margin-left: 4px;/* Tamaño del boder hacia la izquierda*/
+  height: 50px;/* Tamaño de la altura */
+}
+.menu li a:hover{/* Se coloca la clase y se elige el elemento, hover significa que cuando este encima de la lista este se va mostrar de mejor manera */
+  border-style: dotted;/* Estilo del borde */
+  border-right: none;/* Borde a la derecha */
+  border-top: none;/* Borde de la altura */
+  border-bottom: none;/* Borde del botón */
+  color: aqua;/* color de la letra */
+}
+.menu-button-container {/* Es una clase */
+  display: none;/* Forma de la pantalla */
+  height: 100%;/* Alto */
+  width: 30px;/* Ancho */
+  cursor: pointer;/* Tipo del cursor */
+  flex-direction: column;/* Direccion a la que se digirirá */
+  justify-content: center;/* Justificado del contenido */
+  align-items: center;/* Alineacion del contenido */
+}
+#menu-toggle {/* Se empieza con "#" para trabajar con un id */
+  display: none;/* Forma que se va a ocupar */
+}
+.menu-button,
+.menu-button::before,
+.menu-button::after {/* Es lo que se va a realizar antes y despues de utilizar las clase */
+  display: block;/* Forma de la pantalla */
+  background-color: aqua;/* Color del fondo */
+  position: absolute;/* Posicion que se le va a dar */
+  height: 4px;/* Alto */
+  width: 30px;/* Ancho */
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);* Transicion de una figura */
+  border-radius: 2px;/* Tamaño del borde */
+}
+
+.menu-button::before {/* Lo que se va a hacer al iniciar la clase */
+  content: "";/* El contenido */
+  margin-top: -8px;/* Tamaño del margen al principio*/
+}
+
+.menu-button::after {/* Lo que se va hacer despues de la clase */
+  content: "";/* Contenido */
+  margin-top: 8px;/* La forma a la que va regresar */
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {/*Se utiliza el id , luego de que se hace un chequeo y trabajara ñas clases que se colocan, antes  */
+  margin-top: 0px;/* Margen hacia arriba */
+  transform: rotate(405deg);/* Transformacion , rotacion en grados */
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {/* Se utiliza el id , luego de que se hace un chequeo y trabajara ñas clases que se colocan */
+  background: rgba(255, 255, 255, 0);/* Color del fondo */
+}
+#menu-toggle:checked + .menu-button-container .menu-button::after {/* Se utiliza el id , luego de que se hace un chequeo y trabajara ñas clases que se colocan , despues*/
+  margin-top: 0px;/* Margen hacia arriba */
+  transform: rotate(-405deg);/* Transformación, rotacion en grados */
+}
+.componente1{/* Clase */
+	width: 100%;/* Altura */
+	height: 50px;/* Ancho */
+}
+.parte1{/* Clase */
+	width: 50%;/* Altura */
+	height: auto;/* Ancho */
+	position: relative; /* Posición que tendrá */
+	float: left; /* Lugar donde estará */
+	color: brown;/* color de la letra */
+}
+.parte1 h1{/* Clase y se le agrega un elemento*/
+	color: purple;/* color de la letra */
+	font-size: 20px;/* Tamaño de la fuente */
+	text-align: center;/* Alineación del texto */
+}
+.parte2{/* Clase */
+	width: 50%;/* Altura */
+	height: auto;/* Ancho */
+	position: relative;/* Posición que tendrá */
+	float: left;/* Lugar donde estará */
+}
+.parte2 ul{/* Clase y se le agrega un elemento*/
+	display: flex;/* Forma que tomará la pantalla */
+	color: black;/* color de la letra */
+	justify-content: center;/* Justificación del texto */
+}
+.parte2 li{/* Clase y se le agrega un elemento*/
+	margin: 0 1em; /* Tamaño del margen */
+}
+.parte2 ul li{/* Clase y se le agrega un elemento*/
+	text-decoration: none;/* Tipo de decoración */
+	list-style: none;/* Estilo de la lista */
+}
+.parte2 ul li a{/* Clase y se le agrega un elemento*/
+	text-decoration: none;/* Tipo de decoración */
+	color: purple;/* color de la letra */
+}
+.parte2 ul li a:hover{/* Clase y se le agrega un elemento , agregamos un hover*/
+	color: blue;/* color de la letra */
+}
+/* items carrusels */
+.carousel-container{/*  */
+	width: 50%;/* Ancho */
+	height: 700px;/* Altura */
+	margin: 20px auto;/* Margen y alineación que va a tener*/
+	background: purple;/* Color de fondo */
+	overflow-x: hidden;/* Direccion que va llevar las imágenes */
+	display: flex;/* Forma que va a tomar la pantalla */
+}
+.carousel-item{/* clase */
+	width: 100%;/* Ancho */
+	flex-shrink: 0;/* Direccion a la que estará  */
+	animation: slider 50s;/* Duración de la animación */
+}
+.carousel-item p{/* clase con un elemento*/
+	text-align: center;/* Alineación del texto */
+	background: rgba(0, 0, 0, 0.4);/* Color de fondo */
+	width: 100%;/* Ancho */
+	margin: 35% auto 0;/* Margen y alineacion que va a tener*/
+	color: white;/* Color de la letra */
+	padding: 25px 0;/* Relleno */
+}
+/* slider imagenes */
+.uno{/* clase */
+	background: url("../img/hoja.jpe") no-repeat;/* Declaración de la ubicación de la imagen y se coloca en no-repeat para que no se repita la imagen */
+	background-size: cover;/* Tamaño que tendra la imagen */
+}
+.dos{/* clase */
+	background: url("../img/mapa.jpe") no-repeat;/* Declaración de la ubicación de la imagen y se coloca en no-repeat para que no se repita la imagen */
+	background-size: cover;/* Tamaño que tendra la imagen */
+}
+.tres{/* clase */
+	background: url("../img/city.jpe") no-repeat;/* Declaración de la ubicación de la imagen y se coloca en no-repeat para que no se repita la imagen */
+	background-size: cover;/* Tamaño que tendra la imagen */
+}
+.cuatro{/* clase */
+	background: url("../img/produc.jpe") no-repeat;/* Declaración de la ubicación de la imagen y se coloca en no-repeat para que no se repita la imagen */
+	background-size: cover;/* Tamaño que tendra la imagen */
+}
+
+@keyframes slider {/* El @keyframes se utiliza para poderdarle animación y se manda a llamar la animación con el slide */
+
+0%{
+	transform: translateX(0%);/* Traslado de la imagen */
+}
+25%{
+	transform: translateX(-100%);/* Traslado de la imagen */
+}
+50%{
+	transform: translateX(-200%);/* Traslado de la imagen */
+}
+75%{
+	transform: translateX(-300%);/* Traslado de la imagen */
+}
+100%{
+	transform: translateX(0%);/* Traslado de la imagen */
+}
+}
+
+@media (max-width: 800px) {/* Tamaño maximo de la pantalla para empezar los cambios */
+  .menu-button-container {/* Clase */
+    display: flex;/* Forma de la pantalla */
+  }
+  .menu {/* Clase */
+    position: absolute;/* Posicion que se va a tener */
+    top: 0;/* Hacia arriba */
+    margin-top: 50px;/* Margen hacia arriba */
+    left: 0;/* Izquierda */
+    flex-direction: column;/* Direccion a donde se extenderá */
+    width: 100%;/* Altura */
+    justify-content: center;/* Justificación del contenido */
+    align-items: center;/* Alineacion del contenido */
+    z-index: 100;
+  }
+  #menu-toggle ~ .menu li {/* Se coloca un ID y despues de coloca un selector para elegot un clase y un elemento */
+    height: 0;/* Ancho */
+    margin: 0;/* Margen */
+    padding: 0;/* Relleno de un elemento */
+    border: 0;/* Borde */
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);/* Trancisión de lo ancho , en este caso del cubic */
+  }
+  #menu-toggle:checked ~ .menu li {/* Se coloca un ID y despues de coloca un selector para elegot un clase y un elemento */
+    border: 1px solid #333;/* Tamaño del borde y color */
+    height: 2.5em;/* Tamaño en lo ancho */
+    padding: 0.5em;/* Tamaño del relleno de un elemento */
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);/* Trancisión de lo ancho , en este caso del cubic */
+  }
+  .menu > li {/* Clase en donde se hereda */
+    display: flex;/* Forma de la pantalla */
+    justify-content: center;/* Justificaion del contenido */
+    margin: 0;/* Margen */
+    padding: 0.5em 0;/* Relleno de un elemento */
+    width: 100%;/* Alto */
+    color: white;/* Color de la letra */
+    background-color: #222;/* Color del fondo */
+  }
+  .menu > li:not(:last-child) {/* Esta parte no se llevará acabo hasta que no se le herede algo */
+    border-bottom: 1px solid #444;/* Borde del boton y el color se le cambiara */
+  }
+}

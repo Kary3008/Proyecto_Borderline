@@ -1,0 +1,80 @@
+html, body { /*Toma los elementos de hmtl y body*/
+  margin: 0;/*margen de 0pixels*/
+  height: 100%;/*Altura del 100%*/
+  background-color: #fff; /*fondo de la página*/
+}
+
+/*.navbar li a, .navbar .navbar-brand{
+  color: black !important;
+}
+.navbar-nav li a:hover, .navbar-nav li.active a{
+  color: indigo;
+  background-color: transparent !important;
+  border-bottom: 1px solid #C591FF ;
+  transition: 1s;
+}
+.navbar-dafault .navbar-toggle{
+  border-color:transparent;
+  color: #C591FF ;
+}
+.dropdown{
+  color: red;
+}¨*/
+.bg-centro{
+  background-color: #9933ff;
+  color:#C591FF ;
+}
+.bg-main{
+  background-color: #9933ff;
+}
+.bg-header-card{
+  background: #9933ff ;
+  color: black;
+
+
+}
+.carousel-item {
+  height: 90vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.card-columns .card {
+  display: inline-block;
+  width: 100%;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 250px !important; /*esta es la parte importante para que todas tus card-img
+  tengan la misma medida sin importar el tamaño de la imagen*/
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
+}
+.logo{
+  width: 100%;
+  height: 50px
+}
+
+.jumbo{
+  background: url('img/posibles img/img3.png')top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 1em;
+  padding-top: 10em;
+  padding-bottom: 3em;
+}
+
+.parallax{
+  width: 100%;
+  background-image: url('../img/extra/img7.png');
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

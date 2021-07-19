@@ -1,0 +1,137 @@
+@import url(https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap);/*Importar una url: la fuente que se va a utilizar*/
+
+html, body { /*Toma los elementos de hmtl y body*/
+  margin: 0;/*margen de 0pixels*/
+  height: 100%;/*Altura del 100%*/
+  background-color: #E8DAEF; /*fondo de la página*/
+}
+* {
+  font-family: "Pathway Gothic One", arial, sans-serif; /*Mandar a llamar la fuente de @import;*/
+  box-sizing: border-box;/*Siempre va a estar dentro de la caja*/
+  font-size: 21px;/*Tamaño de la fuente*/
+}
+/*Navbar*/
+.logo{
+  width: 150px;
+  height: 50px;
+}
+.bg-main{
+  display: flex; /*Display flexible*/
+  flex-direction: row;/*Va a tener la direccion row*/
+  align-items: center;
+  background: linear-gradient(to left,  #222,#CC3333, #990000 );
+}
+/*Navbar*/
+.img-slide{
+  opacity: 1;
+}
+/*CARD*/
+.card-style{
+  background-color: #A9CCE3;
+  padding: 45px;
+  text-align: justify;
+}
+.style-text{
+  color: #154360;
+}
+/*CARD*/
+/*Slide productos*/
+section{
+	width: 100%;
+  position: absolute;
+}
+.mb-3{
+  background:#A9CCE3;
+  width: auto;
+  padding: 30px;
+}
+.card-img-1{
+  width: 300px;
+  height: 300px;
+}
+.card-text{
+  color: #154360;
+  font-size: 20px;
+  text-align: justify;
+}
+/*fin slide productos*/
+/*info app*/
+.info-text{
+  color: #154360;
+  font-size: 35px;
+}
+.img-app{
+  width: 500px;
+  height: 250px;
+}
+/*info app*/
+/*contacto*/
+.card-img{
+  height: 480px;
+  width: 100%;
+}
+.contac{
+  color: #154360;
+  font-size: 45px;
+}
+/*termina contacto*/
+/*mapa*/
+#map{
+  margin: auto;
+  padding: 30px;
+  height: 100%;
+  width: 100%;
+  filter: grayscale(50%);
+}
+
+.fondo-container{
+  padding: 20px;
+  background: gray;
+}
+/*Termina mapa*/
+.iconos{
+  width:50%;/*Va a tener el 50%*/
+  height: 50%;/*E igual lo va a manejar auto como la parte 1*/
+  position: relative;/*Va a tener una posicion relativa porque es flexible*/
+  border-radius: 50%;
+  cursor:pointer;
+  position: relative;
+}
+.iconos ul{/*Se va trabajar con la lista desordenada*/
+  display: flex;
+  justify-content: center;/*Y este justificado al centro*/
+}
+.iconos li{/*Se va a trabajar la parte 2 con los elementos de la lista*/
+  margin: 0 1rem;/*Va a tener un margen de 0 */
+}
+.iconos ul li{/*Dentro de la parte 2, se va a trabajar con la lista desordenada y también con los elementos de la lista*/
+  text-decoration: none;/*Ningún tipo de decoracion de texto*/
+  list-style: none;/*Ningun estilo de lista*/
+}
+.iconos ul li a{/*Se configuran los elementos de la lista donde contienen los links*/
+  text-decoration: none;/*Ninguna decoracion de texto*/
+  color: #111;/*Color de los iconos*/
+}
+.iconos ul li a:hover{/*Cambiar el efecto al poner el cursor sobre el icono, dentro de la parte 2*/
+  color: #cc3333;/*se va a ocupar un color*/
+}
+
+.ir-arriba{
+  display:none;
+  background:  #283747;
+  padding: 5px;
+  background-repeat:no-repeat;
+  border-radius: 50%;
+  font-size:20px;
+  color:white;
+  cursor:pointer;
+  position:fixed;
+  bottom:10px;
+  margin-bottom: 20px;
+  right:20px;
+  z-index:2;
+}
+.ir-arriba:hover{
+  background:  #17202a;
+  color: white;
+}
